@@ -1,0 +1,233 @@
+:root{
+    --clr-primary-100: hsl(0, 0%, 100%);
+    --clr-primary-400: hsl(225, 100%, 94%);
+    --clr-secondary-200: hsl(245, 75%, 52%);
+    --clr-secondary-100: hsl(245, 75%, 70%);
+    /* --clr-special-100: hsl(245, 87%, 95%); */
+
+    --clr-neutral-900: hsl(223, 47%, 23%);
+    --clr-neutral-400: hsl(224, 23%, 55%);
+    --clr-neutral-100: hsl(225, 100%, 98%);
+
+    --ff-accent: 'Fraunces', serif;
+    --ff-base: 'Montserrat', sans-serif;
+
+    --fw-regular: 500;
+    --fw-bold: 700;
+    --fw-deep: 900;
+}
+
+
+
+
+
+
+*, *::before, *::after{
+    box-sizing: border-box
+}
+
+*{
+    margin: 0;
+}
+
+body {
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6{
+    overflow-wrap: break-word;
+}
+
+h1, h2, h3{
+    line-height: 1;
+}
+
+/* utilities */
+div.grid-group{
+    display: flex;   
+    background-color: var(--clr-neutral-100);
+    border-radius: 1em;
+    padding: 25px;
+    justify-content: space-between;/*this gives spaces in between the two different divs*/
+}
+
+div.grid-group_left{
+    display: flex;/*this helps in aligning your content against each other*/
+    align-items: center;
+    gap: 1rem;
+    text-align: left;
+}
+
+.order__plan{
+    font-weight: var(--fw-deep);
+    color: var(--clr-neutral-900);
+}
+
+.order__price{
+    color: var(--clr-neutral-400);
+    font-weight: var(--fw-regular);
+    font-size: 0.775rem;
+}
+
+.grid-group a{
+    font-weight: var(--fw-bold);
+    color: var(--clr-secondary-200);
+    transition: color .3s ease;
+}
+
+.grid-group a:hover{
+    text-decoration: none;
+    color: var(--clr-secondary-100);
+}
+
+div.grid-group a{
+    font-size: 0.775rem;
+    margin-top: 14px;
+}
+
+
+
+
+   
+/* general styles */
+body{
+    min-height: 100vh;
+    font-family:  var(--ff-base);
+    font-weight: var(--fw-regular);
+    font-size: 0.875rem;
+    color: var(--clr-neutral-400);
+    background-image: url(images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: var(--clr-primary-400);
+    display: grid;
+    place-content: center;
+    margin: 1rem;
+}
+
+
+
+
+
+
+/* order styles */
+.order{
+    --content-padding: 1.5rem; 
+    --content-spacing: 1rem;
+
+    display: grid;
+    max-width: 350px;/* controls how your wide your content is stretched*/
+    background-color: var(--clr-primary-100);
+    margin: 60px 25px;
+    border-radius: 1rem; 
+    overflow: hidden;
+    align-content: center;
+    align-items: center;
+
+}
+
+
+.order__content{
+    text-align: center;
+    display: grid;
+    gap: var(--content-spacing);
+    padding: var(--content-padding);
+}
+
+.order__title{
+    font-size: 1.65rem;
+    font-family: var(--ff-base);
+    color: var(--clr-neutral-900);
+    font-weight: var(--fw-deep);
+}
+
+
+
+a.order__cancel{
+    text-decoration: none;
+    color: var(--clr-neutral-400);
+    font-weight: var(--fw-bold);
+    transition: color .3s ease;/* this helps make the transition look better*/
+}
+
+a.order__payment{
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    gap: 0.75rem;
+    justify-content: center;
+    align-items: center;
+
+    border: 0;
+    border-radius: .75rem;
+    padding: .75em 1.5em;
+    background-color: var(--clr-secondary-200);
+    color: var(--clr-neutral-100);
+    font-weight: var(--fw-bold);
+    font-size: .825rem; 
+    /* box-shadow: 0px 10px var(--clr-special-100); to create a box-shadow effect */
+    transition: background-color .3s ease;
+}
+
+a.order__payment:hover{
+    background-color: var(--clr-secondary-100);
+}
+
+a.order__cancel:hover{
+    color: var(--clr-neutral-900);
+}
+
+@media screen and (max-width: 600px){
+    body{
+        background-image: url(images/pattern-background-mobile.svg);
+        min-width: 340px;
+    }
+
+    .order__title{
+        font-size: 1.4em;
+    }
+
+    div.grid-group{
+        padding: 10px;
+    }
+
+    div.grid-group a{
+        font-size: .725rem;
+    }
+    
+}
+
+
+
+/* using "@media (min-width:600px){}" means you started designing the page with the mobile version first and you trying to scale 
+it up to get the deskto version
+while using "@media(max-width:600px){}" means you started designing the page with the desktop version and you trying to scale 
+it down to get the mobile version.*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
