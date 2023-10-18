@@ -106,7 +106,7 @@ body{
     font-weight: var(--fw-regular);
     font-size: 0.875rem;
     color: var(--clr-neutral-400);
-    background-image: url(images/pattern-background-desktop.svg);
+    background-image: url(pattern-background-desktop.svg);
     background-repeat: no-repeat;
     background-size: contain;
     background-color: var(--clr-primary-400);
@@ -189,7 +189,7 @@ a.order__cancel:hover{
 
 @media screen and (max-width: 600px){
     body{
-        background-image: url(images/pattern-background-mobile.svg);
+        background-image: url(pattern-background-mobile.svg);
         min-width: 340px;
     }
 
